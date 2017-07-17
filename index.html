@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html ng-app="myQuiz">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,9 +8,9 @@
 	</head>
 	<body>
 
-		<div id="myQuiz">
+		<div id="myQuiz" ng-controller="QuizController">
 			<h1>Test Your Knowledge: <span>Saturn</span></h1>
-			<div class="progress"></div>
+			<div class="progress"> {{totalQuestions}} </div>
 			<div class="intro">
 				<h2>Welcome</h2>
 				<p>Click begin to test your knowledge of Saturn.</p>
@@ -30,10 +30,17 @@
 				</div>
 			</div>
 			<div class="results">
-
+				<h3>Results</h3>
+				<p>You scored X% by correctly answering X of the total X questions.</p>
+				<p>Use the links below to challenge your friends.</p>
+				<div class="share">
+					<a class="btn email" href="#">Email</a>
+					<a class="btn twitter" href="#">Tweet</a>
+				</div>
 			</div>
 		</div>
 
-
+		<script type="text/javascript" src="js/angular.min.js"></script>
+		<script type="text/javascript" src="js/quiz.js"></script>
 	</body>
 </html>
